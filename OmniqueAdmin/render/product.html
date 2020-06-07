@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../node_modules/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="../node_modules/spectre.css/dist/spectre-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container m-2">
+        <div class="columns">
+            <div class="column col-10 p-centered text-center">
+                <h2 id="title"></h2>
+                <hr />
+                <div id="productFields" class="form-group">
+                    <input id="id" type="hidden" />
+
+                    <div class="input-group">
+                        <span class="input-group-addon">Name</span>
+                        <input required="required" pattern="[a-zA-Z0-9\s]+" id="name" type="text" class="form-input" />
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-addon">Description</span>
+                        <textarea required="required" pattern="[a-zA-Z0-9\s]+" id="description" class="form-input"></textarea>
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-addon">Price</span>
+                        <input id="price" type="number" class="form-input" step="0.01" />
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-addon">Images</span>
+                        <textarea id="images" class="form-input disabled"></textarea>
+                        <button class="btn file-choose">Choose Files</button>
+                    </div>
+
+                    <div id="imagesPreview"></div>
+
+                    <br />
+                    <h5>Category</h5>
+                    <select id="categories" class="form-select" multiple size="5">
+                        <option value="etsy">On Etsy</option>
+                        <option value="glass">Glassware</option>
+                        <option value="apparel">Apparel</option>
+                        <option value="crochet">Crochet</option>
+                        <option value="personal">Personalised</option>
+                    </select>
+                    <br /><br />
+
+                    <label class="form-switch">
+                        <input id="testProduct" type="checkbox" value="testProd">
+                        <i class="form-icon"></i> This is a test product
+                    </label>
+
+                    <hr />
+                    <br />
+                    <div id="save-edit"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="product.js"></script>
+</body>
+</html>

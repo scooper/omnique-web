@@ -1,0 +1,17 @@
+{
+  "brandName": {
+    "friendlyName": "Brand Name",
+    "type":  "text",
+    "value": "Untitled"
+  },
+  "dropboxFilePath": {
+    "friendlyName": "DropBox File Path",
+    "type": "directory",
+    "value": ""
+  },
+  "mongodbConnectionString": {
+    "friendlyName": "MongoDB Connection String",
+    "type": "text",
+    "value": ""
+  }
+}

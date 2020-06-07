@@ -1,0 +1,31 @@
+extends shared/layout
+
+block content
+    div
+        h2.heading WE ARE OMNIQUE!
+        hr
+        p We strive to give everyone unique designs and personalised items at an affordable price. From clothing to glassware to keepsakes. You can have it all!
+    div
+        div.orbit(role='region', aria-label='slide-images', data-orbit)
+            div.orbit-wrapper
+                div.orbit-controls
+                    button.orbit-previous
+                        span.show-for-sr Previous Slide
+                        | &#9664;&#xFE0E;
+                    button.orbit-next
+                        span.show-for-sr Next Slide
+                        | &#9654;&#xFE0E;
+                ul.orbit-container
+                    li.is-active.orbit-slide 1
+                    li.orbit-slide 2
+            nav.orbit-bullets
+                button.is-active(data-slide='0')
+                button(data-slide='1')
+    div.grid-container
+        div.grid-x.grid-margin-x.small-up-1.medium-up-3
+            each card in cards
+                include shared/card
+        - var nums = [1, 2, 4, 5, 6, 7]
+        each num in nums
+            li num
+        // grid of three cards, collapse into column on mobile

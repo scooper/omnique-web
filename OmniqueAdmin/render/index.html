@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="../node_modules/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="../node_modules/spectre.css/dist/spectre-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container m-2">
+        <div class="columns">
+            <div class="columns col-10 p-centered text-center">
+                <h1>
+                    <span id="title"></span>
+                </h1>
+                <button type="button" class="btn createProduct">
+                    Add Product &nbsp; <i class="icon icon-plus"></i>
+                </button>
+                <button type="button" class="btn" id="config">
+                    Config &nbsp; <i class="icon icon-edit"></i>
+                </button>
+                <button type="button" class="btn" id="sync">
+                    Get Latest Products &nbsp; <i class="icon icon-download"></i>
+                </button>
+                <hr />
+                <h3>Products</h3>
+                <hr />
+                <!--some sort of list generation here, using javascript, list all the products-->
+                <div id="productList"></div>
+                <!--this button should open the add product page and should be at the bottom of the list-->
+                <button type="button" class="btn createProduct">
+                    <i class="icon icon-plus"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

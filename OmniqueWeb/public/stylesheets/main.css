@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'Oswald';
+    src: url("../font/Oswald-Regular.ttf") format("truetype"), local('Oswald');
+}
+
+.hero-section {  
+    background-color: #0f1231;
+    height: 25vh;
+    text-align: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.particles-js-canvas-el {
+    position: absolute;
+    height: inherit !important;
+}
+
+.hero-section .hero-section-text {
+    text-transform: uppercase !important;
+    font-weight: bold;
+    font-size: 32pt;
+    font-family: "Oswald";
+    letter-spacing: 6px;
+    color: #ffffff;
+    text-shadow: 2px 2px #404040;
+}
+
+.full-hero {
+    background-color: #3a3d5c;
+    height: 100%;
+    text-align: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.heading {
+    font-family: "Oswald";
+    color: #1b0036;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}

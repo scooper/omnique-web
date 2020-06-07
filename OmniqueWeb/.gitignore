@@ -1,0 +1,12 @@
+# vs shit
+/*.njsproj.user
+
+# generated files
+*.js
+*.js.map
+/bin
+/obj
+
+# dynamic images
+/public/images/products/*.png
+/public/images/products/*.jpg

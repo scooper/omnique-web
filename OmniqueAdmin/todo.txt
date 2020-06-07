@@ -1,0 +1,1 @@
+- add images in with just the filename or dropboxlocation + filename, after we've added them we dont care where they came from, and we know they'll be in the dropbox location

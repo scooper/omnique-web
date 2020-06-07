@@ -1,3 +1,9 @@
+# 3rd party
+/vendor
+
+# vs dirs
+.vs/
+
 # Logs
 logs
 *.log

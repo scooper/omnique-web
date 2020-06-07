@@ -1,0 +1,6 @@
+# vs shit
+/*.njsproj.user
+
+# generated files
+/bin
+/obj
