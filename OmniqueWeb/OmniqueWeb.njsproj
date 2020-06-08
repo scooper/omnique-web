@@ -32,6 +32,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="config\config.json" />
+    <Content Include="public\images\products\.gitignore">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="public\res\home-cards.json">
       <SubType>Code</SubType>
     </Content>
@@ -97,6 +100,9 @@
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="common\helpers\FormHelper.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="common\helpers\MailHelper.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="common\models\Product.ts">

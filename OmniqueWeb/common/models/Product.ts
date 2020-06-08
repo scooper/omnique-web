@@ -3,13 +3,15 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var ProductSchema = new Schema({
+    _id: String,
     name: String,
     description: String,
-    imagePaths: [String],
+    images: [String],
+    categories: [String],
     price: Number,
     testProduct: Boolean,
-    entryDate: Date,
-    updated: { type: Date, default: new Date() }
+    entryDate: { type: Date, default: new Date() },
+    updated: Date
 });
 
 module.exports = mongoose.model('Product', ProductSchema);

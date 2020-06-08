@@ -1,5 +1,39 @@
 extends shared/layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+
+  //include forms
+  div
+    div.container
+        br
+        if messages.errors.length != 0
+            div.callout.alert(data-closable)
+                ul
+                    each message in messages.errors
+                            li #{message}
+                button.close-button(data-close, aria-label="Dismiss alert", type="button")
+                        span(aria-hidden="true") &times;
+        if messages.info.length != 0
+            div.callout.success(data-closable)
+                ul
+                    each message in messages.info
+                            li #{message}
+                button.close-button(data-close, aria-label="Dismiss success", type="button")
+                        span(aria-hidden="true") &times;
+    div.grid-x.grid-padding-x
+        div.cell.medium-6.float-center
+            h4.heading Leave us a message!
+            form(name="contact", method="post", action="/contact")
+                div.grid-x.grid-padding-x
+                    div.cell.medium-6
+                        input(type="text", placeholder="First Name...", name="firstname", required)
+                    div.cell.medium-6
+                        input(type="text", placeholder="Last Name...", name="lastname", required)
+                    div.cell
+                        input(type="email", placeholder="Email...", name="email", required)
+                    div.cell
+                        input(type="email", placeholder="Confirm Email...", name="emailConfirm", required)
+                    div.cell
+                        textarea(placeholder="Message...", name="message", rows="6", required)
+                    div.cell
+                        input(type="submit", name="submit" value="Submit").button.hollow
