@@ -1,5 +1,6 @@
 import express = require('express');
 const router = express.Router();
+import MailHelper = require('../common/helpers/MailHelper');
 
 //***
 //* GET home page.
@@ -29,6 +30,7 @@ router.post('/', (req: express.Request, res: express.Response) => {
         messages.info.push('Thank you for submitting!');
 
         // send email
+        MailHelper.send({ firstname: fname, lastname: lname, email: email, message: message });
     } 
 
     res.render('contact', { title: 'Contact Us', messages: messages });
