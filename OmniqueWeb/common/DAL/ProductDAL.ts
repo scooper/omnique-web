@@ -4,20 +4,16 @@
 
 var Product = require('../models/Product')
 
-export class ProductDal {
-    public static getProducts(parString: string, includeTestProducts: boolean = false) {
-        //var filter = "/" + parString + "/i";
-        //Product.find({ name: filter }, function (err, docs) {
-
-        //});
-        var products;
-        Product.find
-            .where('name').like(parString)
-            .where('testProduct').equals(includeTestProducts)
-            .exec(function (err, docs) {
-                products = docs;
-            });
-
-        return products;
-    }
+async function getProductsByName(parString: string, includeTestProducts: boolean = false) {
+    return await Product.find
+        .where('name').like(parString)
+        .where('testProduct').equals(includeTestProducts)
 }
+
+async function getProducts(includeTestProducts: boolean = false) {
+    return await Product.find().lean().where('testProduct').equals(includeTestProducts)
+
+}
+
+export {getProductsByName, getProducts}
+

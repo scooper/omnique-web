@@ -1,2 +1,2 @@
-call vendor\ngrok.exe http 1337
+call vendor\ngrok.exe http -region eu 1337
 PAUSE

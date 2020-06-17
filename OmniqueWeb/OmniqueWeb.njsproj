@@ -35,7 +35,13 @@
     <Content Include="public\images\products\.gitignore">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="public\js\gallery.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="public\res\home-cards.json">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\res\home-info.json">
       <SubType>Code</SubType>
     </Content>
     <Content Include="public\res\particles.json" />
@@ -43,6 +49,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\contact.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\large-orders.pug">
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\shared\card.pug">
@@ -58,6 +67,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\shared\product.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\testimonials.pug">
       <SubType>Code</SubType>
     </Content>
     <None Include="app.ts" />
@@ -114,7 +126,13 @@
     <TypeScriptCompile Include="routes\Home.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="routes\LargeOrders.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="routes\Products.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="routes\Testimonals.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="routes\Webhooks.ts">

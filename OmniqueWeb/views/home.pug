@@ -4,9 +4,9 @@ block content
     div
         h2.heading WE ARE OMNIQUE!
         hr
-        p We strive to give everyone unique designs and personalised items at an affordable price. From clothing to glassware to keepsakes. You can have it all!
-    div
-        div.orbit(role='region', aria-label='slide-images', data-orbit)
+        p Bespoke gifts and merchandise at an affordable price; from crochet to glassware to apparel. Tailored to your needs!
+    div.grid-x
+        div.cell.small-12.medium-6.float-center.orbit(role='region', aria-label='slide-images', data-orbit)
             div.orbit-wrapper
                 div.orbit-controls
                     button.orbit-previous
@@ -16,16 +16,25 @@ block content
                         span.show-for-sr Next Slide
                         | &#9654;&#xFE0E;
                 ul.orbit-container
-                    li.is-active.orbit-slide 1
-                    li.orbit-slide 2
+                    each element, index in carousel
+                        li.orbit-slide( class= index == 0 ? "is-active" : "" )
+                            figure.orbit-figure
+                                img.orbit-image( src="images/home/"+element.image )
+                                figcaption.orbit-caption= element.caption
             nav.orbit-bullets
-                button.is-active(data-slide='0')
-                button(data-slide='1')
+                each element, index in carousel
+                    button( class= index == 0 ? "is-active" : "" data-slide= index)
+    // grid of three cards, collapse into column on mobile
     div.grid-container
         div.grid-x.grid-margin-x.small-up-1.medium-up-3
             each card in cards
                 include shared/card
-        - var nums = [1, 2, 4, 5, 6, 7]
-        each num in nums
-            li num
-        // grid of three cards, collapse into column on mobile
+    div.grid-container
+        div.grid-x.grid-padding-x
+            each element, index in info
+                div.home-info.cell.grid-x.grid-padding-x
+                    div.cell.small-12.medium-3
+                        img.thumbnail( src="images/home/"+element.image )
+                    div.cell.small-12.medium-9
+                        h4 #{element.caption}
+                        p #{element.text}

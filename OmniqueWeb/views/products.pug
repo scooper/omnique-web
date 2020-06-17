@@ -1,5 +1,64 @@
 extends shared/layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  script(src='/js/gallery.js')
+  br
+  h4.sub-heading Explore Our Products
+  div.grid-x.grid-padding-x.filters
+    // dropdown buttons
+    div.cell.auto.shrink
+        button.button.hollow(type="button" data-toggle="sort-dropdown")
+            span Sort By &nbsp;
+            i.fas.fa-sort-down
+    div.cell.auto.expand
+        button.button.hollow(type="button" data-toggle="filter-dropdown")
+            span Filter By &nbsp;
+            i.fas.fa-sort-down
+    // dropdown containers
+    // sorting dropdown
+    div.dropdown-pane.shrink#sort-dropdown(data-dropdown data-auto-focus="true")
+        fieldset.grid-x
+            div.cell
+                input.sort-radio(type="radio", name="sort", value="atoz", id="atoz", checked)
+                label(for="atoz") Product (A-Z)
+            div.cell
+                input.sort-radio(type="radio", name="sort", value="ztoa", id="ztoa")
+                label(for="ztoa") Product (Z-A)
+            div.cell
+                input.sort-radio(type="radio", name="sort", value="lowtohigh", id="lowtohigh")
+                label(for="lowtohigh") Price (Low-High)
+            div.cell
+                input.sort-radio(type="radio", name="sort", value="hightolow", id="hightolow")
+                label(for="hightolow") Price (High-Low)
+    // filtering dropdown
+    div.dropdown-pane.shrink#filter-dropdown(data-dropdown data-auto-focus="true")
+        fieldset.grid-x
+            div.cell
+                input.sort-check(type="checkbox", name="filter", value="featured", id="featured", checked)
+                label(for="featured") Featured
+            div.cell
+                input.sort-check(type="checkbox", name="filter", value="etsy", id="etsy", checked)
+                label(for="etsy") On Etsy
+            div.cell
+                input.sort-check(type="checkbox", name="filter", value="apparel", id="apparel", checked)
+                label(for="apparel") Apparel
+            div.cell
+                input.sort-check(type="checkbox", name="filter", value="crochet", id="crochet", checked)
+                label(for="crochet") Crochet
+            div.cell
+                input.sort-check(type="checkbox", name="filter", value="glass", id="glass", checked)
+                label(for="glass") Glassware
+            div.cell
+                input.sort-check(type="checkbox", name="filter", value="personalised", id="personalised", checked)
+                label(for="personalised") Personalised
+  // gallery bit
+  div.gallery.grid-x.grid-padding-x.small-up-1.medium-up-4(data-equalizer)
+    each product, index in products
+        - var classes = product.categories.join(' ');
+        - var priceFormatted = product.price.toFixed(2);
+        div.cell.product(data-price= product.price, data-name= product.name)
+            div.card.product-card(class= classes)
+                div.card-section.card-heading #{product.name} - &pound;#{priceFormatted}
+                div.card-image-container(data-equalizer-watch)
+                    img.card-image.float-center(src= 'images/products/' + product.images[0])
+    

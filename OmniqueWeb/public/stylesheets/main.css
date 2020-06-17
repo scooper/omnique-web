@@ -56,6 +56,31 @@
     letter-spacing: 4px;
 }
 
+.sub-heading {
+    font-family: "Oswald";
+    color: #1b0036;
+    padding: 10px;
+}
+
 textarea {
     resize: none;
 }
+
+.product-card {
+    border-top: 8px solid;
+    border-color: rgb(15, 18, 49);
+}
+
+.etsy {
+    border-color: rgb(245, 139, 87);
+}
+
+.featured {
+    border-color: green;
+}
+
+/*.gallery {
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}*/

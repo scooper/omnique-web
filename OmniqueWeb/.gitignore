@@ -7,6 +7,10 @@
 /bin
 /obj
 
+# but not these client side JS files
+!/public/**/*.js
+!/public/images/products
+
 # dynamic images
 /public/images/products/*.png
 /public/images/products/*.jpg
