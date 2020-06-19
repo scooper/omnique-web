@@ -1,0 +1,9 @@
+{
+  "testimonials": [
+    {
+      "name": "Example",
+      "testimonial": "Example testimonial",
+      "image": "test.jpg"
+    }
+  ]
+}

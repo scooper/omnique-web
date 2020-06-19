@@ -1,0 +1,71 @@
+extends shared/layout
+
+block content
+  //include forms
+  div
+    div.container
+        br
+        if messages.errors.length != 0
+            div.callout.alert(data-closable)
+                ul
+                    each message in messages.errors
+                            li #{message}
+                button.close-button(data-close, aria-label="Dismiss alert", type="button")
+                        span(aria-hidden="true") &times;
+        if messages.info.length != 0
+            div.callout.success(data-closable)
+                ul
+                    each message in messages.info
+                            li #{message}
+                button.close-button(data-close, aria-label="Dismiss success", type="button")
+                        span(aria-hidden="true") &times;
+    div.grid-x.grid-padding-x
+        div.cell.medium-8.float-center
+            h4.sub-heading Larger Orders
+            p At Omnique, we have always taken pride in our work with businesses and groups that require personalised merchandise. You may have noticed that we do not put prices on our website of how much a bulk order would cost. This is because we work with our suppliers to cut the cost down for clients as much as possible. This includes, but is not limited to, bulk buy discount depending on how many items are being ordered at once. Please fill out the form below if you have any enquiries or would like to request a quote.
+            form(name="large-orders", method="post", action="/large-orders")
+                div.grid-x.grid-padding-x
+                    div.cell.medium-6
+                        label Contact Name *
+                            input(type="text", placeholder="", name="contactname", required)
+                    div.cell.medium-6
+                        label Company/Group Name
+                            input(type="text", placeholder="", name="groupname")
+                    div.cell.medium-6
+                        label Email *
+                            input(type="email", placeholder="", name="email", required)
+                    div.cell.medium-6
+                        label Confirm Email *
+                            input(type="email", placeholder="", name="emailConfirm", required)
+                    div.cell
+                        label Type of Item *
+                            select(name="type", required)
+                                option(value="tshirt") T-shirt
+                                option(value="hoodie") Hoodie
+                                option(value="zipup") Zip-up
+                                option(value="quaterzip") Quater Zip
+                                option(value="tote") Tote Bags
+                                option(value="gymbags") Cotton Gym Bags
+                    div.cell
+                        label Expected Quantity *
+                            input(type="number", name="quantity", required)
+                    div.cell
+                        label Item Colour/s *
+                            input(type="text", placeholder="", name="itemcolour", required)                           
+                    div.cell
+                        label Size Information
+                            textarea(placeholder="Include any information you wish to tell us about sizes here...", name="sizesinfo", rows="4")
+                    div.cell
+                        label Design Colour *
+                            input(type="text", placeholder="", name="designcolour", required) 
+                    div.cell
+                        label Design Information *
+                            textarea(placeholder="Include any information you wish to tell us about your design here...", name="designinfo", rows="4", required)
+                    div.cell
+                        label Deadline Date *
+                            input(type="date", name="deadline", required)
+                    div.cell
+                        label Other Information
+                            textarea(placeholder="Include any other information here...", name="otherinfo", rows="3")
+                    div.cell
+                        input(type="submit", name="submit" value="Submit").button.hollow

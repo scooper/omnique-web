@@ -12,6 +12,8 @@ var mongoose = require('mongoose');
 import homeRoutes from './routes/Home';
 import productRoutes from './routes/Products';
 import contactRoutes from './routes/Contact';
+import testimonialRoutes from './routes/Testimonals';
+import largeOrderRoutes from './routes/LargeOrders';
 
 // webhooks
 import webhookRoutes from './routes/Webhooks';
@@ -27,6 +29,10 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+//// datepicker setup
+//app.use('/datepicker/js', express.static(path.join(__dirname, '/node_modules/foundation-datepicker/js')));
+//app.use('/datepicker/css', express.static(path.join(__dirname, '/node_modules/foundation-datepicker/css')));
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -34,6 +40,8 @@ app.use(bodyParser.json());
 app.use('/', homeRoutes);
 app.use('/products', productRoutes);
 app.use('/contact', contactRoutes);
+app.use('/testimonials', testimonialRoutes);
+app.use('/large-orders', largeOrderRoutes);
 
 // use webhook routes
 app.use('/webhook', webhookRoutes);

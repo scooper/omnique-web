@@ -19,7 +19,7 @@ block content
                     each element, index in carousel
                         li.orbit-slide( class= index == 0 ? "is-active" : "" )
                             figure.orbit-figure
-                                img.orbit-image( src="images/home/"+element.image )
+                                img.orbit-image( src="images/general/"+element.image )
                                 figcaption.orbit-caption= element.caption
             nav.orbit-bullets
                 each element, index in carousel
@@ -34,7 +34,7 @@ block content
             each element, index in info
                 div.home-info.cell.grid-x.grid-padding-x
                     div.cell.small-12.medium-3
-                        img.thumbnail( src="images/home/"+element.image )
+                        img.thumbnail( src="images/general/"+element.image )
                     div.cell.small-12.medium-9
                         h4 #{element.caption}
                         p #{element.text}

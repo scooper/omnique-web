@@ -1,0 +1,15 @@
+extends shared/layout
+
+block content
+    div
+        h2.sub-heading Testimonials
+        hr
+        p Since starting up in August 2018, Omnique has worked with many clients and customers on a very wide variety of orders. This page is where we display some of the messages we have received from people who have shopped with us.
+
+    div.grid-container
+        div.grid-x.grid-padding-x
+            each element, index in testimonials
+                div.cell
+                    h4 #{element.name}
+                    img( src="images/general/"+element.image )
+                    p #{element.testimonial}

@@ -32,6 +32,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="config\config.json" />
+    <Content Include="public\images\general\i-apparel.jpg" />
+    <Content Include="public\images\general\i-crochet.jpg" />
+    <Content Include="public\images\general\i-glassware.jpg" />
+    <Content Include="public\images\general\i-merchandise.jpg" />
+    <Content Include="public\images\general\i-prints.jpg" />
     <Content Include="public\images\products\.gitignore">
       <SubType>Code</SubType>
     </Content>
@@ -46,6 +51,9 @@
     </Content>
     <Content Include="public\res\particles.json" />
     <Content Include="public\js\main.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\res\testimonials.json">
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\contact.pug">
@@ -64,9 +72,6 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\shared\nav.pug">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="views\shared\product.pug">
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\testimonials.pug">
@@ -96,6 +101,7 @@
     <Folder Include="public\" />
     <Folder Include="public\font\" />
     <Folder Include="public\images\" />
+    <Folder Include="public\images\general\" />
     <Folder Include="public\images\products\" />
     <Folder Include="public\js\" />
     <Folder Include="public\res\" />

@@ -5,6 +5,7 @@ const fs = require('fs');
 
 const resources = path.resolve(__dirname, '../public/res');
 const infoJson = require(resources + '/home-info.json');
+const cardsJson = require(resources + '/home-cards.json');
 
 const carousel = [
     { caption: "Crochet", image: "c-crochet.jpg"},
@@ -18,9 +19,7 @@ const carousel = [
 //* GET home page.
 //*
 router.get('/', (req: express.Request, res: express.Response) => {
-    var raw = fs.readFileSync(resources + '/home-cards.json');
-    var cards = JSON.parse(raw);
-    res.render('home', { title: 'About Us', cards: cards.cards, carousel: carousel, info: infoJson.info });
+    res.render('home', { title: 'About Us', cards: cardsJson.cards, carousel: carousel, info: infoJson.info });
 });
 
 export default router;
