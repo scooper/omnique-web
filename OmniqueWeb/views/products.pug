@@ -56,9 +56,17 @@ block content
     each product, index in products
         - var classes = product.categories.join(' ');
         - var priceFormatted = product.price.toFixed(2);
+        - var etsy = product.categories.includes('etsy');
+        - var featured = product.categories.includes('featured');
         div.cell.product(data-price= product.price, data-name= product.name)
             div.card.product-card(class= classes)
-                div.card-section.card-heading #{product.name} - &pound;#{priceFormatted}
                 div.card-image-container(data-equalizer-watch)
-                    img.card-image.float-center(src= 'images/products/' + product.images[0])
+                    img.card-image.float-center( src= 'images/products/' + product.images[0] )
+                div.card-section.card-heading.product-title #{product.name} 
+                div.card-section.product-price 
+                    span.float-left &pound;#{priceFormatted}
+                    - if(etsy)
+                        span.float-right.label.product-label.product-label-etsy On Etsy!
+                    - if(featured)
+                        span.float-right.label.product-label.product-label-featured Featured
     

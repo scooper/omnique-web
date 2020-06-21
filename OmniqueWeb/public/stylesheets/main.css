@@ -67,20 +67,83 @@ textarea {
 }
 
 .product-card {
-    border-top: 8px solid;
-    border-color: rgb(15, 18, 49);
+    border: none;
+}
+
+.product-title {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.product-price {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+
+.product-label {
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.product-label-etsy {
+    background-color: #fecf84;
+    color: black;
+}
+
+.product-label-featured {
+    background-color: green;
+}
+
+.card-image {
+    border-radius: 5px;
 }
 
 .etsy {
-    border-color: rgb(245, 139, 87);
+    
 }
 
 .featured {
-    border-color: green;
+    
 }
 
-/*.gallery {
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-}*/
+.footer {
+    width: 100%;
+    background-color: #0f1231;
+    margin-top: 2rem;
+    padding: 2rem;
+}
+
+.footer-text {
+    color: white;
+}
+
+.footer-social a {
+    color: white;
+    padding: 0px 5px 0px 5px;
+}
+
+.top-bar {
+    border-top: solid 10px #ffc61a;
+    padding-bottom: 10px;
+}
+
+.top-bar, .top-bar ul {
+    background-color: #ffd24d;
+    font-family: "Oswald";
+    font-size: 1.2em;
+}
+
+.top-bar a {
+    color: #1a1a1a;
+}
+
+.top-bar a:hover {
+    color: #1c284a;
+}
+
+.button.hollow {
+    border-radius: 8px;
+    border-color: #1c284a;
+    color: #1c284a;
+}

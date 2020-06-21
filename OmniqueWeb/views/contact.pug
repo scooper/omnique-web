@@ -22,18 +22,25 @@ block content
                         span(aria-hidden="true") &times;
     div.grid-x.grid-padding-x
         div.cell.medium-6.float-center
-            h4.sub-heading Leave us a message!
+            h4.sub-heading Leave us a message here!
             form(name="contact", method="post", action="/contact")
                 div.grid-x.grid-padding-x
                     div.cell.medium-6
-                        input(type="text", placeholder="First Name...", name="firstname", required)
+                        label First Name
+                            input(type="text", placeholder="", name="firstname", required)
                     div.cell.medium-6
-                        input(type="text", placeholder="Last Name...", name="lastname", required)
+                        label Last Name
+                            input(type="text", placeholder="", name="lastname", required)
                     div.cell
-                        input(type="email", placeholder="Email...", name="email", required)
+                        label Email
+                            input(type="email", placeholder="", name="email", required)
                     div.cell
-                        input(type="email", placeholder="Confirm Email...", name="emailConfirm", required)
+                        label Confirm Email
+                            input(type="email", placeholder="", name="emailConfirm", required)
                     div.cell
-                        textarea(placeholder="Message...", name="message", rows="6", required)
+                        label Message
+                            textarea(placeholder="", name="message", rows="6", required)
                     div.cell
                         input(type="submit", name="submit" value="Submit").button.hollow
+        div.cell.medium-3.float-center
+            h4.sub-heading ...or on our social media!

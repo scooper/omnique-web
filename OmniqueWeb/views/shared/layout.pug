@@ -19,9 +19,15 @@ html
   
         block content
 
-        div.footer
-            hr
-            p Omnique 2020
+    footer.footer
+        div.footer-text.grid-x
+            div.cell.medium-6.text-center.footer-social
+                a(href="https://www.facebook.com/omnique.designs", target="_blank")
+                    i.fab.fa-facebook-square.fa-2x
+                a(hred="https://www.instagram.com/omnique.designs", target="_blank")
+                    i.fab.fa-instagram-square.fa-2x
+            div.cell.medium-6.text-center
+                span &copy; 2020 Omnique
 
     script.
         particlesJS.load('particles-js', '/res/particles.json');
