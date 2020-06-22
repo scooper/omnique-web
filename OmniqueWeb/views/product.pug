@@ -1,0 +1,15 @@
+extends shared/layout
+
+block content
+    - var imageNum = product.images.length;
+    div.grid-x.grid-padding-x
+        div.cell
+            h3.heading #{product.name}
+        div.cell
+            span #{product.price}
+        div.cell
+            span #{product.description}
+        each image in product.images
+            div.cell(class= "small-"+imageNum )
+                img(src="/images/products/"+image )
+            

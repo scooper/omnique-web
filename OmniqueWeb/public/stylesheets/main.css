@@ -3,6 +3,10 @@
     src: url("../font/Oswald-Regular.ttf") format("truetype"), local('Oswald');
 }
 
+html, body {
+    min-height: 100vh;
+}
+
 .hero-section {  
     background-color: #0f1231;
     height: 25vh;
@@ -108,10 +112,23 @@ textarea {
 }
 
 .footer {
+    clear: both;
     width: 100%;
+    height: 6rem;
     background-color: #0f1231;
-    margin-top: 2rem;
     padding: 2rem;
+    position: absolute;
+    bottom: 0;
+}
+
+.full-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content {
+    padding-top: 2rem;
+    padding-bottom: 8rem;
 }
 
 .footer-text {
@@ -124,12 +141,12 @@ textarea {
 }
 
 .top-bar {
-    border-top: solid 10px #ffc61a;
+    border-top: solid 10px #c99326;
     padding-bottom: 10px;
 }
 
 .top-bar, .top-bar ul {
-    background-color: #ffd24d;
+    background-color: #dead4b;
     font-family: "Oswald";
     font-size: 1.2em;
 }
@@ -139,7 +156,7 @@ textarea {
 }
 
 .top-bar a:hover {
-    color: #1c284a;
+    color: #2a3c6f;
 }
 
 .button.hollow {

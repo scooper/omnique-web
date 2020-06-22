@@ -15,5 +15,9 @@ async function getProducts(includeTestProducts: boolean = false) {
 
 }
 
-export {getProductsByName, getProducts}
+async function getProductById(id: string) {
+    return await Product.findById(id).lean();
+}
+
+export {getProductsByName, getProducts, getProductById}
 

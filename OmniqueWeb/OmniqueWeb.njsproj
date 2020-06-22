@@ -6,6 +6,9 @@
     <Name>OmniqueWeb</Name>
     <RootNamespace>OmniqueWeb</RootNamespace>
     <SaveNodeJsSettingsInProjectFile>True</SaveNodeJsSettingsInProjectFile>
+    <ScriptArguments>
+    </ScriptArguments>
+    <Environment>NODE_ENV=development</Environment>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -60,6 +63,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\large-orders.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\product.pug">
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\shared\card.pug">

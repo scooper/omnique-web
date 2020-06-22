@@ -12,22 +12,22 @@ html
     script(src='/js/main.js')
     link(rel='stylesheet', href='/stylesheets/main.css')
   body
-    div#particles-js.hero-section
-        h1.hero-section-text #{title}
-    include nav
-    div.grid-container(data-sticky-container)
-  
-        block content
+    div.full-container
+        div#particles-js.hero-section
+            h1.hero-section-text #{title}
+        include nav
+        div#content.grid-container(data-sticky-container)
+            block content
 
-    footer.footer
-        div.footer-text.grid-x
-            div.cell.medium-6.text-center.footer-social
-                a(href="https://www.facebook.com/omnique.designs", target="_blank")
-                    i.fab.fa-facebook-square.fa-2x
-                a(hred="https://www.instagram.com/omnique.designs", target="_blank")
-                    i.fab.fa-instagram-square.fa-2x
-            div.cell.medium-6.text-center
-                span &copy; 2020 Omnique
+        footer.footer
+            div.footer-text.grid-x
+                div.cell.medium-6.text-center.footer-social
+                    a(href="https://www.facebook.com/omnique.designs", target="_blank")
+                        i.fab.fa-facebook-square.fa-2x
+                    a(hred="https://www.instagram.com/omnique.designs", target="_blank")
+                        i.fab.fa-instagram-square.fa-2x
+                div.cell.medium-6.text-center
+                    span &copy; 2020 Omnique
 
     script.
         particlesJS.load('particles-js', '/res/particles.json');
