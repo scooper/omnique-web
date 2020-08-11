@@ -99,6 +99,27 @@ textarea {
     background-color: green;
 }
 
+.product-details {
+    padding: 20px 20px 20px 20px !important;
+}
+
+.product-image-main {
+    height:50vh;
+}
+
+.product-image-small {
+    padding: 5px;   
+}
+
+.product-image-small img {
+    max-height: 150px !important;
+}
+
+.product-image-list {
+    overflow-y: scroll;
+    height: 50vh;
+}
+
 .card-image {
     border-radius: 5px;
 }
