@@ -26,4 +26,3 @@ jobs:
           npm install --production
           npm run build          
           pm2 restart app
-          systemctl restart nginx
