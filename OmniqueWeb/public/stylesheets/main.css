@@ -22,6 +22,43 @@ html, body {
     justify-content: center;
 }
 
+.coming-soon {
+    background-color: #0f1231;
+    height: 100vh;
+    text-align: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.coming-soon-section .coming-soon-text {
+    text-transform: uppercase !important;
+    font-weight: bold;
+    font-size: 4rem;
+    font-family: "Oswald";
+    letter-spacing: 6px;
+    color: #ffffff;
+    text-shadow: 2px 2px #404040;
+}
+
+.fas {
+    color: white;
+    font-size: 5rem;
+}
+
+.coming-soon-subtext {
+    font-size: 1.5rem;
+    font-family: "Oswald";
+    color: #ffffff;
+    text-shadow: 2px 2px #404040;
+}
+
 .particles-js-canvas-el {
     position: absolute;
     height: inherit !important;

@@ -19,7 +19,8 @@ const carousel = [
 //* GET home page.
 //*
 router.get('/', (req: express.Request, res: express.Response) => {
-    res.render('home', { title: 'About Us', cards: cardsJson.cards, carousel: carousel, info: infoJson.info });
+    //res.render('home', { title: 'About Us', cards: cardsJson.cards, carousel: carousel, info: infoJson.info });
+    res.render('coming-soon');
 });
 
 export default router;

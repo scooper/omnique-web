@@ -1,0 +1,27 @@
+doctype html
+html
+    head
+        meta(name='viewport', content='width=device-width', initial-scale='1.0')
+        title= title
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+        link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css', integrity='sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=', crossorigin='anonymous')
+        link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/motion-ui@1.2.3/dist/motion-ui.min.css')
+        script(src='https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js', integrity='sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=', crossorigin='anonymous')
+        script(src='https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js')
+        script(src='https://kit.fontawesome.com/ec7b5b425d.js')
+        script(src='/js/main.js')
+        link(rel='stylesheet', href='/stylesheets/main.css')
+    body
+        div#particles-js.coming-soon
+            div.coming-soon-section
+                h3.coming-soon-text Coming Soon
+                p.coming-soon-subtext
+                    span We're hard at work making improvements and new additions.
+                    br
+                    span Check back at the end of September 2020 to see all the great things we have in store for you!
+                i.fas.fa-cogs
+
+        script.
+            particlesJS.load('particles-js', '/res/particles.json');
+        script.
+            $(document).foundation();
