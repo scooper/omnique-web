@@ -1,22 +1,60 @@
 extends shared/layout
 
 block content
-    - var imageNum = product.images.length;
+    - var etsy = product.categories.includes('etsy');
     div.grid-x.grid-padding-x
         div.cell.small-12.medium-5.product-details
             div.cell
-                h3.heading #{product.name}
+                h3.product-heading #{product.name}
+                - if(etsy)
+                    div.float-right.label.product-label.product-label-etsy.margin-10.text-center
+                        a(href="https://www.etsy.com/uk/shop/OmniqueDesigns", target="_blank")
+                            span Click to see me
+                            br
+                            span on etsy!
             div.cell
-                span #{product.price}
+                span.product-price &pound;#{product.price}
             div.cell
-                span #{product.description}
+                span.product-description !{product.description}
+                -if(etsy)
+                    br
+                    br
+                    span.product-description-etsy This product is on etsy, if you would like to purchase one, 
+                        a(href="https://www.etsy.com/uk/shop/OmniqueDesigns") click here!
         div.cell.small-12.medium-7
             div.grid-x
-                div.cell.small-9.medium-8.align-left
-                    div.cell.product-image-main
-                        img(src="/images/products/"+product.images[0] )           
-                div.cell.small-3.medium-4
-                    div.grid-y.product-image-list
-                        each image in product.images
-                            div.cell.product-image-small
-                                img(src="/images/products/"+image )
+                -if(product.images.length > 1)
+                    div.cell.small-9.medium-7
+                        div.product-image-main.text-center
+                            img(src="/images/products/"+product.images[0] )      
+                    div.cell.small-3.medium-5
+                        div.grid-y.product-image-list
+                            each image in product.images
+                                div.cell.product-image-small
+                                    img(src="/images/products/"+image )
+                -else
+                    div.cell.small-12
+                        div.product-image-main.text-center
+                            img(src="/images/products/"+product.images[0] )
+
+
+    script.
+        $(document).ready(function() {
+            matchListHeightToImageHeight();
+        });
+
+        $('.product-image-small img').click(function() {
+            var src = $(this).attr('src');
+
+            if(src != '') {
+                $('.product-image-main img').attr('src', src);
+            }
+
+            matchListHeightToImageHeight();
+        });
+
+        function matchListHeightToImageHeight() {
+            var mainImageHeight= $('.product-image-main img').height();
+            $('.product-image-list').height(mainImageHeight);
+        }
+    

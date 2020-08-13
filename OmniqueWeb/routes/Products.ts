@@ -18,7 +18,7 @@ router.get('/', async (req: express.Request, res: express.Response) => {
 router.get('/:productId', async (req: express.Request, res: express.Response) => {
     // pass through product using ID
     var product = await ProductDal.getProductById(req.params.productId);
-
+    product.description = product.description.replace(/(?:\r\n|\r|\n)/g, '<br>');
     res.render('product', { title: 'Products', product: product });
 });
 

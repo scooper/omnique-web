@@ -26,15 +26,19 @@ block content
                     button( class= index == 0 ? "is-active" : "" data-slide= index)
     // grid of three cards, collapse into column on mobile
     div.grid-container
-        div.grid-x.grid-margin-x.small-up-1.medium-up-3
+        h3.heading Our Values
+        div.grid-x.grid-margin-x.small-up-1.medium-up-3(data-equalizer)
             each card in cards
                 include shared/card
+        br
     div.grid-container
-        div.grid-x.grid-padding-x
+        h3.heading Our Products
+        div.grid-x.grid-padding-x.align-center
             each element, index in info
-                div.home-info.cell.grid-x.grid-padding-x
-                    div.cell.small-12.medium-3
+                - var even = index%2 == 0;
+                div.home-info.cell.grid-x.grid-padding-x( class= even ? 'even' : 'odd' )
+                    div.cell.small-12.medium-3.home-section-image
                         img.thumbnail( src="images/general/"+element.image )
                     div.cell.small-12.medium-9
-                        h4 #{element.caption}
-                        p #{element.text}
+                        h4.home-section-header #{element.caption}
+                        p.home-section-text #{element.text}

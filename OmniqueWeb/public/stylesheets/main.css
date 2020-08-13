@@ -103,29 +103,101 @@ textarea {
     padding: 20px 20px 20px 20px !important;
 }
 
-.product-image-main {
-    height:50vh;
+.product-image-main img {
+    border-radius: 5px;
+    max-height: 40vh;
 }
 
 .product-image-small {
-    padding: 5px;   
+    padding: 0px 5px 5px 5px;
 }
 
 .product-image-small img {
+    border-radius: 5px;
     max-height: 150px !important;
 }
 
+.product-image-small:hover {
+    opacity: 0.8;
+}
+
 .product-image-list {
-    overflow-y: scroll;
-    height: 50vh;
+    overflow-y: auto;
+    max-height: 40vh;
+    max-width: 150px;
+}
+
+.product-heading {
+    font-size: 2rem;
+    display:inline;
+}
+
+.product-price {
+    font-weight: bold;
+}
+
+.product-description {
+    color: rgba(0,0,0,0.5);
+}
+
+.product-description-etsy {
+    color: rgba(0,0,0,0.8);
+    font-size: 0.9rem;
 }
 
 .card-image {
     border-radius: 5px;
 }
 
+.home-card {
+    border-radius: 5px;
+    border-color: rgba(0,0,0,0.4);
+}
+
+.home-card-header {
+    background-color: rgba(222, 173, 75, 0.7);
+}
+
+.home-card-text {
+    color: rgba(0,0,0,0.6);
+}
+
+.home-section-header {
+
+}
+
+.home-section-text {
+    color: rgba(0,0,0,0.6);
+}
+
+.home-section-image img {
+    border-radius: 5px;
+}
+
+.home-info {
+    width:95%;
+    padding: 10px 0px 10px 0px !important;
+    border-right: 2px solid rgba(0,0,0,0.1);
+    border-left: 2px solid rgba(0,0,0,0.1);
+}
+
+.home-info:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top: 2px solid rgba(0,0,0,0.1);
+}
+
+.home-info:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+}
+
+.home-info.even {
+    background-color: rgba(222, 173, 75, 0.1);
+}
+
 .etsy {
-    
 }
 
 .featured {
@@ -184,4 +256,12 @@ textarea {
     border-radius: 8px;
     border-color: #1c284a;
     color: #1c284a;
+}
+
+.padding-10 {
+    padding: 10px;
+}
+
+.margin-10 {
+    margin: 10px;
 }
