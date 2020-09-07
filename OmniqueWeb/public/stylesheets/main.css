@@ -47,7 +47,7 @@ html, body {
     text-shadow: 2px 2px #404040;
 }
 
-.fas {
+.fa-cogs {
     color: white;
     font-size: 5rem;
 }
@@ -65,6 +65,7 @@ html, body {
 }
 
 .hero-section .hero-section-text {
+    display: block;
     text-transform: uppercase !important;
     font-weight: bold;
     font-size: 32pt;
@@ -283,10 +284,20 @@ textarea {
 
 .top-bar a {
     color: #1a1a1a;
+    font-weight: normal;
+    font-size: 1.5rem;
 }
 
 .top-bar a:hover {
     color: #2a3c6f;
+}
+
+.menu.vertical li {
+    padding:0.4rem;
+}
+
+.menu.vertical {
+    border-color: transparent;
 }
 
 .button.hollow {

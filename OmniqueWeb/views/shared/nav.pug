@@ -1,9 +1,22 @@
 div#nav
     div.top-bar.stacked-for-small.sticky(data-sticky, data-top-anchor='nav:top', data-options="marginTop:0;")
             div.top-bar-left
-                ul.menu
-                    li.menu-text #{title}                    
-            div.top-bar-right
+                ul.menu.dropdown(data-dropdown-menu)
+                    li.menu-text #{title}
+                    li.menu-text.show-for-small-only.fas.fa-bars(style='margin-left:auto;')
+                        ul.menu.vertical
+                            li
+                                a(href='/') Home
+                            //li
+                                a(href='/testimonials') Testimonials
+                            li
+                                a(href='/products') Products
+                            li
+                                a(href='/large-orders') Large Orders
+                            li
+                                a(href='/contact') Contact Us
+                         
+            div.top-bar-right.hide-for-small-only
                 ul.menu
                     li
                         a(href='/') Home

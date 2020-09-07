@@ -11,12 +11,15 @@ html
     link(rel='stylesheet', href='/stylesheets/main.css')
   body
     div#particles-js.hero-section
-        h1.hero-section-text Oops, something went wrong! :
-        h1.hero-section-text= error.status
+        div
+            h1.hero-section-text Oops, something went wrong!
+            - var codeMessage = error.status + ' ' + message;
+            h2(style='font-size:1.8rem;').hero-section-text= codeMessage
+        
     include shared/nav
     div.grid-container
-        p= message
-        pre #{error.stack}
+        br
+        pre(style='color:darkred;') #{error.stack}
 
     script.
         particlesJS.load('particles-js', '/res/particles.json');

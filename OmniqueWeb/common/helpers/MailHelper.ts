@@ -13,10 +13,11 @@ const transporter = nodemailer.createTransport({
 });
 
 function send(info) {
+    var isDev = process.env.NODE_ENV === 'development' ? 'DEV ' : '';
     var mailOptions = {
         from: config.emailer.infoEmail,
         to: config.emailer.omniqueEmail,
-        subject: 'OmniqueWeb - ' + info.firstname + '\'s Message',
+        subject: isDev + 'OmniqueWeb - ' + info.firstname + '\'s Message',
         text: 'Name: ' + info.firstname + ' ' + info.lastname + '\nEmail: ' + info.email + '\n' + info.message
     };
 
