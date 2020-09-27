@@ -14,6 +14,7 @@ import productRoutes from './routes/Products';
 import contactRoutes from './routes/Contact';
 import testimonialRoutes from './routes/Testimonals';
 import largeOrderRoutes from './routes/LargeOrders';
+import careRoutes from './routes/CareInstructions';
 
 // webhooks
 import webhookRoutes from './routes/Webhooks';
@@ -42,6 +43,7 @@ app.use('/products', productRoutes);
 app.use('/contact', contactRoutes);
 app.use('/testimonials', testimonialRoutes);
 app.use('/large-orders', largeOrderRoutes);
+app.use('/care-instructions', careRoutes);
 
 // use webhook routes
 app.use('/webhook', webhookRoutes);

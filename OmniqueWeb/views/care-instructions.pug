@@ -1,0 +1,30 @@
+extends shared/layout
+
+block content
+    
+    div
+        h4.sub-heading Disclaimer
+        p= care.disclaimer
+
+    h4.sub-heading Item Care Instructions
+    div.grid-x.padding-x
+        each section in care.careInstructions
+            div.cell.small-12.care-section
+                div.care-heading= section.heading
+                br
+                if section.safety != null
+                    div.care-subheading Safety
+                    br
+                    div.care-body= section.safety
+                    br
+                if section.washing != null
+                    div.care-subheading Wash Instructions
+                    br
+                    div.care-body= section.washing
+                    br
+                if section.care != null
+                    div.care-subheading Care Instructions
+                    br
+                    div.care-body= section.care
+                    br
+        

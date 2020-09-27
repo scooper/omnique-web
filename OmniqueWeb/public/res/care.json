@@ -1,0 +1,53 @@
+{
+  "disclaimer": "All of our items are handmade with love and care, but this means they will have slight variations.",
+  "careInstructions": [
+    {
+      "heading": "Crochet Bow",
+      "safety": "Supervise children and babies while wearing the bows at all times, as our items contain small parts which could be a choking hazard. Remove bows while sleeping and laying down in prams etc.",
+      "washing": "Do not wash. If the item gets dirty, wipe with a damp cloth and leave to air dry.",
+      "care": "Ends of yarn can come untucked with use. If this happens, tuck the end of the yarn into a neighbouring stitch at the back of the item. Be careful not to catch the yarn on rings, jewellery or sharp items as this can cause damage to the product."
+    },
+    {
+      "heading": "100% Cotton Item",
+      "safety": null,
+      "washing": "Can be washed  on cotton cycles up to 60 degrees.",
+      "care": "Ends of yarn can come untucked with use. If this happens, tuck the end of the yarn into a neighbouring stitch at the back of the item. Be careful not to catch the yarn on rings, jewellery or sharp items as this can cause damage to the product."
+    },
+    {
+      "heading": "Acrylic-blend Crochet Item",
+      "safety": null,
+      "washing": "Should be washed at 30 degrees; delicate cycle preferred.",
+      "care": "Ends of yarn can come untucked with use. If this happens, tuck the end of the yarn into a neighbouring stitch at the back of the item. Be careful not to catch the yarn on rings, jewellery or sharp items as this can cause damage to the product."
+    },
+    {
+      "heading": "Crochet Item with Wooden Addition",
+      "safety": null,
+      "washing": "Do not wash. If the item gets dirty, wipe with a damp cloth and leave to air dry.",
+      "care": "Ends of yarn can come untucked with use. If this happens, tuck the end of the yarn into a neighbouring stitch at the back of the item. Be careful not to catch the yarn on rings, jewellery or sharp items as this can cause damage to the product."
+    },
+    {
+      "heading": "Personalised Apparel (with Vinyl)",
+      "safety": null,
+      "washing": "Should be washed at 30 degrees.",
+      "care": "Iron inside out, not on a hot heat temperature. Some fabrics may have stitches that can be caught on rings, jewellery or sharp items, so care must be taken to not damage the item with these."
+    },
+    {
+      "heading": "Personalised Item (with Vinyl)",
+      "safety": null,
+      "washing": "Do not leave to Soak. Not suitable for dishwashers.",
+      "care": "Direct sunlight may fade the item. Impacts or force may damage the item or vinyl."
+    },
+    {
+      "heading": "Etched Glassware",
+      "safety": null,
+      "washing": "Do not leave to soak. Not suitable for dishwashers. Do not use abrasive cleaner.",
+      "care": "Direct sunlight may fade the item. Impacts or force may fade the item."
+    },
+    {
+      "heading": "Prints and Cards",
+      "safety": null,
+      "washing": null,
+      "care": "Do not keep in direct sunlight. Do not get wet. Protect with a frame for best condition to be maintained."
+    }
+  ]
+}

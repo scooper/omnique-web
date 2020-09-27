@@ -313,3 +313,15 @@ textarea {
 .margin-10 {
     margin: 10px;
 }
+
+.care-section {
+    text-align:center;
+}
+
+.care-heading {
+    text-decoration: underline;
+}
+
+.care-subheading {
+    font-weight: bold;
+}

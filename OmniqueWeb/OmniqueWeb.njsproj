@@ -46,6 +46,9 @@
     <Content Include="public\js\gallery.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="public\res\care.json">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="public\res\home-cards.json">
       <SubType>Code</SubType>
     </Content>
@@ -57,6 +60,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="public\res\testimonials.json">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\care-instructions.pug">
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\coming-soon.pug">
@@ -133,6 +139,9 @@
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="common\models\Product.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="routes\CareInstructions.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="routes\Contact.ts">
