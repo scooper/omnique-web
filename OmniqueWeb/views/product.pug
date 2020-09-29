@@ -22,7 +22,7 @@ block content
                     span.product-description-etsy This product is on etsy, if you would like to purchase one, 
                         a(href="https://www.etsy.com/uk/shop/OmniqueDesigns") click here!
         div.cell.small-12.medium-7
-            div.grid-x
+            div.grid-x.product-image-container
                 -if(product.images.length > 1)
                     div.cell.small-9.medium-7
                         div.product-image-main.text-center
@@ -40,7 +40,7 @@ block content
 
     script.
         $(document).ready(function() {
-            matchListHeightToImageHeight();
+            setTimeout(matchListHeightToImageHeight, 500);
         });
 
         $('.product-image-small img').click(function() {

@@ -325,3 +325,7 @@ textarea {
 .care-subheading {
     font-weight: bold;
 }
+
+.product-image-container {
+    padding-top: 2rem;
+}
