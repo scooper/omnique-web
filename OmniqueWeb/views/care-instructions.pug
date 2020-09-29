@@ -7,9 +7,14 @@ block content
         p= care.disclaimer
 
     h4.sub-heading Item Care Instructions
+    div
+        each section in care.careInstructions
+            a(href='#' + section.heading.replace(/\s/g, '') ).care-heading= section.heading
+            br
+    br
     div.grid-x.padding-x
         each section in care.careInstructions
-            div.cell.small-12.care-section
+            div.cell.small-12.care-section(id=section.heading.replace(/\s/g, ''))
                 div.care-heading= section.heading
                 br
                 if section.safety != null
