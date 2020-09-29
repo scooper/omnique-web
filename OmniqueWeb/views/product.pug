@@ -2,6 +2,7 @@ extends shared/layout
 
 block content
     - var etsy = product.categories.includes('etsy');
+    - var priceFormatted = product.price.toFixed(2);
     div.grid-x.grid-padding-x
         div.cell.small-12.medium-5.product-details
             div.cell
@@ -13,7 +14,7 @@ block content
                             br
                             span on etsy!
             div.cell
-                span.product-price &pound;#{product.price}
+                span.product-price &pound;#{priceFormatted}
             div.cell
                 span.product-description !{product.description}
                 -if(etsy)
