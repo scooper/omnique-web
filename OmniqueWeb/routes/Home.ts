@@ -10,8 +10,7 @@ const cardsJson = require(resources + '/home-cards.json');
 const carousel = [
     { caption: "Crochet", image: "c-crochet.jpg"},
     { caption: "Prints", image: "c-prints.jpg"},
-    { caption: "Apparel", image: "c-apparel.jpg"},
-    { caption: "Glassware", image: "c-glassware.jpg"}
+    { caption: "Apparel", image: "c-apparel.jpg"}
     //{ caption: "Merchandise", image: "c-merchandise.jpg"}
 ]
 
