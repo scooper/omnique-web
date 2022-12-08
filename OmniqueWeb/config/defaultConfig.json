@@ -1,0 +1,15 @@
+{
+  "emailer": {
+    "omniqueEmail": "emailer",
+    "infoEmail":  "toemail",
+    "password": ""
+  },
+  "dropbox": {
+    "clientId": "",
+    "clientSecret": "",
+    "accessToken": ""
+  },
+  "mongo": {
+    "connectionString": ""
+  }
+}
